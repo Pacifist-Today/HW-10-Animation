@@ -12,7 +12,6 @@
 }
 
 .sun {
-    /*animation: 1s ease-out infinite alternate 10s forwards;*/
     display: inline-block;
     position:relative;
     bottom:-260px;
@@ -29,10 +28,6 @@
     animation-duration: 20s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
-    /*animation-duration: 10s;
-    transform-origin: center;
-    transition: background-color 0s;
-    transition: background-color orange;*/
 }
 
 @keyframes sun-rise {
@@ -69,9 +64,6 @@
  .triangles {
     float:right;
     display:inline-block;
-    /*position:relative;
-    top:76%;
-    right:35%;*/
     margin-left:auto;
     margin-right:auto;
     width: auto;
@@ -107,7 +99,7 @@
     top:-71px;
 }
 
-.bigskyblock {
+/*.bigskyblock {
     position:relative;
     right:200px;
     animation-name: sky;
@@ -116,7 +108,7 @@
     animation-duration: 3s;
     transform-origin: center;
     animation-direction: alternate;
-}
+}*/
 
 @keyframes sky {
     0% {
@@ -128,24 +120,78 @@
     }
 }
 
-.bigskyblock.smallskyblock {
+.bigskyblock.smallskyblock-first {
     position: relative;
     top:-400px;
     left: -150px;
     animation-name: smallsky1;
-    animation-timing-function: linear;
     animation-iteration-count:infinite;
-    animation-duration: 3s;
-    animation-direction: alternate;
+    animation-duration: 9s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+}
+
+.bigskyblock.smallskyblock-second {
+    position: relative;
+    top:-800px;
+    left: -150px;
+    animation-name: smallsky1;
+    animation-fill-mode:backwards;
+    animation-iteration-count:infinite;
+    animation-duration: 9s;
+    animation-direction:reverse;
+    animation-timing-function: ease-out;
 }
 
 @keyframes smallsky1 {
     0% {
-        transform: scale(50%) translateX(0%);
-    }
-
-    100% {
         transform: scale(50%) translateX(210%);
+    }
+    /*25% {
+        transform: scale(50%) translateX(-40%);
+    }*/
+    50% {
+        transform: scale(50%) translateX(-40%);
+    }
+    /*75% {
+        transform: scale(50%) translateX(-40%)
+    }*/
+    100% {
+        transform: scale(50%) translateX(-40%);
+    }
+}
+
+.bigskyblock.smallskyblock-third {
+    position: relative;
+    top:-900px;
+    left: -150px;
+    animation-name: smallsky2;
+    animation-fill-mode:backwards;
+    animation-iteration-count:infinite;
+    animation-duration: 16s;
+    animation-direction:normal;
+    animation-timing-function: ease-in;
+}
+
+@keyframes smallsky2 {
+    0% {
+        transform: scale(50%) translateX(-40%);
+    }
+    /*25% {
+        transform: scale(50%) translateX(-40%);
+    }*/
+    60% {
+        transform: scale(50%) translateX(210%);
+    }
+    /*75% {
+        transform: scale(50%) translateX(210%);
+    }*/
+    /*70% {
+        transform: scale(50%) translateX(-40%);
+    }*/
+
+    85% {
+        transform: scale(50%) translateX(-40%);
     }
 }
 
