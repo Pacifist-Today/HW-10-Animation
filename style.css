@@ -110,11 +110,46 @@
     animation-direction: alternate;
 }*/
 
-@keyframes sky {
-    0% {
-        transform: translateX(0%);
-    }
+.bigskyblock.bigskyblock-first {
+    position:relative;
+    right:200px;
+    animation-name: bigsky1;
+    animation-timing-function: ease-in;
+    animation-iteration-count:infinite;
+    animation-duration: 18s;
+    animation-direction: normal;
+}
 
+.bigskyblock.bigskyblock-second {
+    position:relative;
+    top:-1100px;
+    right:200px;
+    animation-name: bigsky2;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-duration: 18s;
+    animation-direction: normal;
+}
+
+@keyframes bigsky1 {
+    0% {
+        transform: translateX(150%);
+    }
+    40% {
+        transform: translateX(-40%);
+    }
+    75% {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes bigsky2 {
+    0% {
+        transform: translateX(160%);
+    }
+    60% {
+        transform: translateX(-20%);
+    }
     100% {
         transform: translateX(140%);
     }
@@ -163,7 +198,7 @@
 
 .bigskyblock.smallskyblock-third {
     position: relative;
-    top:-900px;
+    top:-950px;
     left: -150px;
     animation-name: smallsky2;
     animation-fill-mode:backwards;
